@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Firefighter Game</title>
+</head>
+<body>
+    <h1>Firefighter Game</h1>
+    <div id="fire">
+        {% for intensity in fire_intensity %}
+            <div class="fire-cell" data-position="{{ loop.index0 }}" style="background-color: rgba(255, 0, 0, {{ intensity / 5 }})"></div>
+        {% endfor %}
+    </div>
+    <button id="extinguish-button">Extinguish Fire</button>
+
+    <script>
+        document.getElementById('extinguish-button').addEventListener('click', function() {
+            var position = prompt('Enter position to extinguish (0 to {{ fire_intensity|length - 1 }}):');
+            if (position === null) return;
+            position = parseInt(position);
+            if (!isNaN(position) && position >= 0 && position < {{ fire_intensity|length }}) {
+                fetch('/extinguish', {
+                    method: 'POST',
+                    body: new URLSearchParams({ position: position }),
+                    headers: { 'Content-Type': 'application/x-www-form-urlencoded' }
+                })
+                .then(response => response.json())
+                .then(data => {
+                    var fireCells = document.querySelectorAll('.fire-cell');
+                    fireCells[position].style.backgroundColor = `rgba(255, 0, 0, ${data.fire_intensity[position] / 5})`;
+                });
+            } else {
+                alert('Invalid position!');
+            }
+        });
+    </script>
+</body>
+</html>
