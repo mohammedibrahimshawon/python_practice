@@ -16,7 +16,7 @@ print(c)
 """
 
 
-
+"""
 f = "ARASH"
 g = "AFIFBOOTTT"
 h = "ALIF"
@@ -27,3 +27,9 @@ h = "ALIF"
 print(f)
 print(g)
 print(h)
+"""
+
+cars = ["TOYOTA", "AUDI", "BMW"]
+x, y, z = cars
+
+print(x)
