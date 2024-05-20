@@ -1,0 +1,29 @@
+"""
+x = 5
+y = "Arash"
+
+a = str(3)
+b = int(3)
+c = float(3)
+
+
+print(x)
+print(y)
+
+print(a)
+print(b)
+print(c)
+"""
+
+
+
+f = "ARASH"
+g = "AFIFBOOTTT"
+h = "ALIF"
+
+
+
+
+print(f)
+print(g)
+print(h)
