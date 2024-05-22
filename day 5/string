@@ -1,0 +1,14 @@
+"""a = '''Lorem ipsum dolor sit amet \n,
+consectetur adipiscing elit \n,
+sed do eiusmod tempor incididunt \n
+ut labore et dolore magna aliqua.'''
+print(a)
+
+txt = "The best things in life are free!"
+if "bree" not in txt:
+  print("Yes, 'bree' is not present.")
+
+"""
+
+a = "Arash"
+print(a.replace("h", "z"))
