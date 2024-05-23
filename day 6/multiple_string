@@ -1,0 +1,25 @@
+# age = 12
+# txt = f"I am ARASH.I am {age} years old"
+# print(txt)
+
+# price = 59
+# txt = f"The price is {price:.2f} dollars"
+# print(txt)
+
+# price = 5000/12
+# txt = f"The price is {price:.2f}  taka"
+# print(txt)
+
+
+# txt = "My name is \"Arash\" "
+# print(txt)
+
+a = "MyFolder"
+b = "Demo 002"
+c = "2bring"
+d = "my demo"
+
+print(a.isidentifier())
+print(b.isidentifier())
+print(c.isidentifier())
+print(d.isidentifier())
