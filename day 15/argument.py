@@ -12,7 +12,14 @@
 # my_function("Iqbal", "Hossen")
 
 
-def my_function(child4, child3, child2, child1):
-  print("The youngest child is " + child4)
+# def my_function(child4, child3, child2, child1):
+#   print("The youngest child is " + child4)
 
-my_function(child1 = "Emil", child2 = "Tobias", child3 = "Linus", child4 = "Afif bot")
+# my_function(child1 = "Emil", child2 = "Tobias", child3 = "Linus", child4 = "Afif bot")
+
+
+def my_function(myfamily):
+    for x in myfamily:
+      print(x)
+myfamily = ["a", "b", "c"]
+my_function(myfamily)
