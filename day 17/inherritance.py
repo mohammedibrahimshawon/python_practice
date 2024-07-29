@@ -18,6 +18,10 @@ class Person:
   def printname(self):
     print(self.firstname, self.lastname)
 
+# class Student(Person):
+#   pass
 
-x = Person("shown", "uddin")
+x = person("shown", "uddin")
+# x = Student("Mike", "Olsen")
+
 x.printname()
